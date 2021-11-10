@@ -6,7 +6,7 @@ import java.util.Random;
 public class GuessingGame implements ActionListener {
   JTextField userGuess;
   JButton guessButton;
-  JButton playAgainButton;
+  JButton resetButton;
   JLabel guessLabel;
   JLabel highLowLabel;
   JLabel previousGuessLabel;
@@ -24,11 +24,11 @@ public class GuessingGame implements ActionListener {
     userGuess.setActionCommand("myTF");
 
     guessButton = new JButton("Guess");
-    playAgainButton = new JButton("Play Again");
+    resetButton = new JButton("Play Again");
 
     userGuess.addActionListener(this);
     guessButton.addActionListener(this);
-    playAgainButton.addActionListener(this);
+    resetButton.addActionListener(this);
 
     guessLabel = new JLabel("Enter your guess: ");
     highLowLabel = new JLabel("");
@@ -41,7 +41,7 @@ public class GuessingGame implements ActionListener {
     frame.add(guessButton);
 
     frame.add(previousGuessLabel);
-    frame.add(playAgainButton);
+    frame.add(resetButton);
     frame.setVisible(true);
   }
 
